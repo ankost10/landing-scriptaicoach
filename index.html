@@ -8,9 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Icons (cache-busted) -->
-  <link rel="icon" href="favicon.ico?v=5" type="image/x-icon">
-  <link rel="apple-touch-icon" href="favicon.jpeg?v=5">
+  <link rel="icon" href="favicon.ico?v=8" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon.jpeg?v=8">
   <style>
     :root{
       --bg:#ffffff; --card:#ffffff; --text:#1A1A1A; --muted:#667085;
@@ -53,12 +52,11 @@
 <body>
   <div class="wrap">
     <header>
-      <!-- Prefer SVG; fall back to a known-good absolute PNG URL (+ cache-bust) -->
-      <picture>
-        <source srcset="logo-horizontal.svg?v=5" type="image/svg+xml">
-        <img src="https://ankost10.github.io/landing-scriptaicoach/logo-horizontal.png?v=5"
-             alt="Script AI Coach logo" width="90" height="90" />
-      </picture>
+      <!-- SIMPLE IMG ONLY (no <picture>) to avoid iOS fallback bug. Local file with cache-bust. -->
+      <img src="logo-horizontal.png?v=8"
+           alt="Script AI Coach logo"
+           width="90" height="90"
+           onerror="this.onerror=null; this.src='logo.jpeg?v=8';" />
       <div class="brand">Script AI Coach</div>
     </header>
 
