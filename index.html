@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.ico?v=10" type="image/x-icon">
-  <link rel="apple-touch-icon" href="favicon.jpeg?v=10">
+  <link rel="icon" href="favicon.ico?v=11" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon.jpeg?v=11">
   <style>
     :root{
       --bg:#ffffff; --card:#ffffff; --text:#1A1A1A; --muted:#667085;
@@ -22,10 +22,11 @@
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:980px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:flex-start;gap:18px;padding-top:8px;}
-    header img{height:90px;width:auto;flex-shrink:0;display:block}
-    header .brand{font-weight:800;font-size:28px;line-height:1.1;margin-top:10px;}
-    .hero{padding:40px 0 12px}
+    /* Header: lock layout so brand stays beside logo on iPhone */
+    header{display:flex;align-items:center;gap:12px;padding-top:8px;}
+    header img{height:90px;width:auto;flex:0 0 auto;display:block}
+    header .brand{flex:0 0 auto;font-weight:800;font-size:28px;line-height:1.1;margin:0;}
+    .hero{padding:24px 0 12px}
     .headline{font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.15;margin:0}
     .sub{font-size:clamp(16px,2.6vw,22px);color:var(--muted);margin-top:12px}
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
@@ -52,9 +53,9 @@
 <body>
   <div class="wrap">
     <header>
-      <img src="logo-horizontal.png?v=10"
+      <img src="logo-horizontal.png?v=11"
            alt="Script AI Coach logo"
-           onerror="this.onerror=null; this.src='logo.jpeg?v=10';" />
+           onerror="this.onerror=null; this.src='logo.jpeg?v=11';" />
       <div class="brand">Script AI Coach</div>
     </header>
 
